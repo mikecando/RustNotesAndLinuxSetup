@@ -1,0 +1,2 @@
+Based on this webpage tutorial
+https://kadekillary.work/post/webscraping-rust/
