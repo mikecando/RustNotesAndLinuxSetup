@@ -1,0 +1,5 @@
+Links f0r web scraping
+https://www.gkbrk.com/wiki/rust_web_scraping/
+
+Uses reqwest,scraper,select with good examples
+https://kadekillary.work/post/webscraping-rust/

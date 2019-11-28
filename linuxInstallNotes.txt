@@ -1,0 +1,83 @@
+Machine name: DOCKER01
+user dockadmin
+pwd  dockadmin
+
+
+Here are some articel to follow up on
+
+https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/
+https://medium.com/@chaudharypulkit93/my-coding-environment-setup-from-scratch-on-ubuntu-18-04-cedf30981042
+https://dev.to/brpaz/my-linux-development-environment-of-2018-ch7
+
+Installing GO on Ubuntu 18.04
+https://snapcraft.io/install/go/ubuntu
+
+Install mosquitto
+https://medium.com/@aegkaluk/install-mqtt-broker-on-ubuntu-18-04-15232ab0ee42
+
+Install MariaDB
+https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/
+
+Install Atom
+https://linuxize.com/post/how-to-install-atom-text-editor-on-ubuntu-18-04/
+
+Updating system
+sudo apt update && sudo apt upgrade   //THis updates the system
+
+Installing snap to install software
+sudo apt update
+sudo apt install snapd
+
+Installing GO
+sudo snap install go --classic
+
+Installing Docker
+sudo snap install docker
+
+Installing git
+(this did not work for go!!!!!)sudo snap install git-ubuntu --classic
+I used the following
+sudo apt-get install git
+I followed this to create my repo
+https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
+
+Installing atom ide
+sudo snap install atom --classic
+
+
+starting docker
+sudo snap services
+
+Installing RDP
+I followed this article
+https://linuxize.com/post/how-to-install-xrdp-on-ubuntu-18-04/
+
+Installing mariadb
+https://computingforgeeks.com/install-mariadb-10-on-ubuntu-18-04-and-centos-7/
+sudo apt-get install software-properties-common
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"
+sudo apt update
+sudo apt -y install mariadb-server mariadb-client
+
+set passwords
+sudo mysql_secure_installation
+
+Install as service
+sudo systemctl enable --now mariadb
+
+mysql -u root -p
+SELECT VERSION();
+show engines\g
+
+Run this command to uninstall mariadb
+sudo apt-get purge mariadb-client mariadb-server
+
+
+
+
+
+
+
+
+

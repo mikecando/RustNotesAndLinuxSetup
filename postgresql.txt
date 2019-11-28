@@ -1,0 +1,24 @@
+Installing postgresql-timescaledb I followed this website
+https://docs.timescale.com/latest/getting-started/installation/ubuntu/installation-apt-ubuntu
+
+connecting command line
+sudo su - postgres
+psql
+
+following this to set up first database in timescaldb
+https://docs.timescale.com/latest/getting-started/setup
+
+.....setting the password for user postgres
+.....Do this to login
+psql -U postgres -h localhost
+psql
+.....then run this
+ALTER USER postgres PASSWORD 'postgres';
+
+....starting postgresql manually
+sudo -u postgres /usr/lib/postgresql/11/bin/pg_ctl -D /etc/postgresql/11/main -l /var/log/postgresql/postgresql-11-main.log start
+
+psql -U postgres -h localhost -p 5433  //note I had to add -p 5433 because the port got changed to 5433 from 5432
+
+stop and start as a service
+sudo service postgresql stop

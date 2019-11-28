@@ -1,0 +1,50 @@
+****************  Installing on Windows Subsystem  ***************
+
+Website in regards to installing windows subsystem
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+article on doing a backup and restore
+https://windows7bugs.wordpress.com/2019/05/13/windows-subsystem-for-linux-backup-restore/
+
+
+Start powershell asadmin and run the following
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+rboot required and then choose your linux version. 
+
+All should be the same for insalling rust just like Ubuntu when running
+inside the subsystem
+
+Website with rust install info
+https://www.rust-lang.org/tools/install
+
+Notes on mounting to a windows directory
+
+******************************************************************
+
+*****  These are the steps to install rust on ubuntu 1804 ********
+
+sudo apt-get update -y
+sudo apt upgrade -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt install cargo
+
+sudo apt install build-essential
+
+wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1c.tar.gz && tar xzvf OpenSSL_1_1_1c.tar.gz
+cd ~/openssl-OpenSSL_1_1_1c
+./config --prefix=/opt/openssl-1.1.1c no-shared
+sudo make && sudo make install_sw
+
+# make sure pkg-config is installed
+sudo apt-get install -y pkg-config
+sudo apt install libssl-dev
+
+Had to run this command to get cargo to work
+source $HOME/.cargo/env
+
+*****************************************************
+
+
+
+

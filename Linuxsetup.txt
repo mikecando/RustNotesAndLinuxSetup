@@ -1,0 +1,79 @@
+Here are some articel to follow up on
+
+https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/
+https://medium.com/@chaudharypulkit93/my-coding-environment-setup-from-scratch-on-ubuntu-18-04-cedf30981042
+https://dev.to/brpaz/my-linux-development-environment-of-2018-ch7
+
+Installing GO on Ubuntu 18.04
+https://snapcraft.io/install/go/ubuntu
+Simply installs with 
+sudo snap install go --classic
+
+Install mosquitto
+https://medium.com/@aegkaluk/install-mqtt-broker-on-ubuntu-18-04-15232ab0ee42
+
+Install MariaDB
+https://linuxize.com/post/how-to-install-mariadb-on-ubuntu-18-04/
+
+Install Atom
+https://linuxize.com/post/how-to-install-atom-text-editor-on-ubuntu-18-04/
+
+Commands I ran
+
+Installed Google Chrome form the firefox download directly from google
+
+sudo apt update && sudo apt upgrade
+sudo apt install curl
+sudo apt install make
+sudo apt install vim
+
+Run these commands to make command completio to be case insensitive
+
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
+
+sudo apt install terminator
+
+Install and set up git
+sudo apt install git
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+Now we make an SSH key for github to install on the server account. I am referencing the orginal site
+https://medium.com/@chaudharypulkit93/my-coding-environment-setup-from-scratch-on-ubuntu-18-04-cedf30981042
+and also
+https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account
+
+ssh-keygen
+This is how we install the ssh key on github
+sudo apt install xclip   //this is a tool for copying to the clipboard (used to copy the SSH key)
+
+
+Mongodb install and configure
+
+
+https://linuxize.com/post/how-to-install-mongodb-on-ubuntu-18-04/
+
+Basic tutorial I followed after the installaton
+https://flaviocopes.com/mongodb/
+
+Check out the multi part articles for mongdb and timeseries data
+https://www.mongodb.com/blog/post/time-series-data-and-mongodb-part-1-introduction
+
+https://www.infoq.com/articles/Starting-With-MongoDB/
+
+Here is how to add tcmadmin as a user
+db.createUser(
+  {
+    user: "tcmadmin",
+    pwd: "tcmadmin",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+Logging in with user
+mongo -u tcmadmin -p --authenticationDatabase admin
+
+Setting up RDP I followed this article
+https://www.makeuseof.com/tag/how-to-establish-simple-remote-desktop-access-between-ubuntu-and-windows/
+
